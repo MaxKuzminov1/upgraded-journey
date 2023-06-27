@@ -1,5 +1,4 @@
 #include <iostream>
-#include <math.h>
 
 using namespace std;
 void task_1(); void task_2();void task_3();void task_4();
@@ -60,10 +59,12 @@ void task_2(){
 void task_3(){
     int common_divisor_max = 0;
     int num1, num2;
+
     cout<<"Enter the first number: "<<endl;
     cin>>num1;
     cout<<"Enter the second number: "<<endl;
     cin>>num2;
+
     for (int i = 1; i <= num1; i++)
     {
         if(num1%i==0 and num2%i==0 and i>common_divisor_max){
@@ -74,5 +75,24 @@ void task_3(){
 }
 
 void task_4(){
-    
+    int n;
+    double num1 = 0;
+    double num2 = 1;
+    double num3;
+    double ratio,ratio2;
+    cout<<"Enter an number: "<<endl;
+    cin>>n;
+    cout<<num1<<" ";
+    for (int i = 0; i < n; i++)
+    {
+        num3 = num1+num2;
+        cout << num3 << " ";
+        num1 = num2;
+        num2 = num3;    
+    }
+
+    ratio2 = num3/(num3-num1);
+    cout << endl << endl << "Penultimate pair ratio = " << ratio2 << endl;
+    ratio = num3/num1;
+    cout << endl << "Last pair ratio = " << ratio << endl;
 }
